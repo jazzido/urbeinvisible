@@ -2,6 +2,7 @@ body {
   background-color: #ddd;
   margin: 0;
   font-family: Georgia, serif;
+  background-image: url(background.png);
 }
 h1 {
   font-family: 'Allura', cursive;
@@ -22,19 +23,19 @@ h1 {
 div#container {
   width: 70%;
   margin: 0 auto;
-  margin-top: 100px; margin-bottom: 20px;
+  margin-top: 50px; margin-bottom: 20px;
   padding: 10px;
 }
 
 #credits {
   width: 12%;
-  height: 5%;
+  height: 20%;
   position: fixed;
-  top: 85%;
+  top: 79%;
   left: 86.5%;
-  //background-color: #d5d5d5;
+  background-color: rgba(213,213,213,0.8);
   padding: 5px;
-  color: #888;
+  color: #333;
   font-size: 10px;
 }
 
@@ -49,20 +50,24 @@ div#container {
   margin: 0;
   border: 5px solid white;
 }
-.city h3 {
-  position: absolute;
-  top: -34px;
-  left: -220px;
-  width: 200px;
-  text-align: right;
-  // font-family: 'Allura', cursive;
-  font-size: 30px;
 
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  left: -125px;
-  top: 74px;
+body .city h3 {
+  position: absolute;
+  text-align: right;
+  width: 99%; 
+  z-index: 2000;
+  font-size: 30px;
+  margin: 0;
+  color: #ddd;
+  margin-top: 12px;
+  left: 5px;
+  top: 0px;
 }
+
+body:not(.focused) .city h3 {
+  visibility: hidden;
+}
+
 .city a {
   text-decoration: none;
   color: black;

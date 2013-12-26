@@ -3,6 +3,7 @@ $(function() {
   var resetAll = function() {
     $('div.city').animate({ opacity: 1 })
     $("body").css("overflow", "auto");
+    $('body').removeClass('focused');
   };
 
   $(document).keyup(function(e) {
@@ -44,7 +45,6 @@ $(function() {
     if ($(this).hasClass('focused')) {
       e.preventDefault(); e.stopPropagation();
       resetAll();
-      $(this).removeClass('focused');
     }
   });
 
