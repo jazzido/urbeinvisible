@@ -12,7 +12,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1>Las Ciudades Invisibles</h1>
+        <!-- h1>Las Ciudades Invisibles</h1 -->
         <div id="container">
             <% sections.keys.each_with_index do |header, i| %>
                 <div class="city">
@@ -20,12 +20,16 @@
                     <h3><%= sections[header]['city'] %></h3>
                     <p>
                         <% sections[header]['sentences'].each_with_index do |sentence, j| %>
-                            <a href="#s_<%= i %>_<%= j %>" id="s_<%= i %>_<%= j %>"><%= sentence %></a>
+                            <a href="#s_<%= i %>_<%= j %>_" id="s_<%= i %>_<%= j %>_"><%= sentence %></a>
                         <% end %>
                     </p>
                 </div>
             <% end %>
         </div>
+        <p id="credits">
+            <b><a href="http://twitter.com/urbeinvisible">@urbeinvisible</a></b> es un experimento sobre literatura dosificada basado en <a href="http://es.wikipedia.org/wiki/Las_ciudades_invisibles">"Las Ciudades Invisibles"</a> de <a href="http://es.wikipedia.org/wiki/Italo_Calvino">Ítalo Calvino</a><br><br>
+            <a href="http://jazzido.com">Manuel Aristarán</a> (<a href="https://github.com/jazzido/urbeinvisible">código fuente</a>)
+        </p>
         <script type="text/javascript" src="site.js"></script>
         <script type="text/javascript">
          /*
