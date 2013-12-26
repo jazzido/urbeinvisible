@@ -20,50 +20,19 @@
                     <h3><%= sections[header]['city'] %></h3>
                     <p>
                         <% sections[header]['sentences'].each_with_index do |sentence, j| %>
-                            <span id="s_<%= i %>_<%= j %>"><%= sentence %></span>
+                            <a href="#s_<%= i %>_<%= j %>" id="s_<%= i %>_<%= j %>"><%= sentence %></a>
                         <% end %>
                     </p>
                 </div>
             <% end %>
         </div>
-
+        <script type="text/javascript" src="site.js"></script>
         <script type="text/javascript">
-         $(function() {
-
-             var resetAll = function() {
-                 $('div.city').animate({ opacity: 1 })
-                 $("body").css("overflow", "auto");
-             };
-
-             $(document).keyup(function(e) {
-                 if (e.keyCode == 27) { resetAll(); } // ESC
-             });
-
-
-             if (window.location.hash == '') return;
-             var sentence = $('span' + window.location.hash);
-
-             var city = sentence.closest('div.city');
-
-             $('html, body').animate({
-                 scrollTop: city.offset().top + (city.height() / 2) - ($(window).height() / 2)
-             },
-                                     1000,
-                                     function() {
-                                         $('div.city').not(city).animate({ opacity: 0 })
-                                         sentence.animate({ backgroundColor: '#FFFFC0' });
-                                         $("body").css("overflow", "hidden"); // disable scrolling
-                                     }
-                                    );
-
-         });
-        </script>
-
-        <script type="text/javascript">
+         /*
          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
                         g.src='//www.google-analytics.com/ga.js';
-                        s.parentNode.insertBefore(g,s)}(document,'script'));
+                        s.parentNode.insertBefore(g,s)}(document,'script'));*/
         </script>
     </body>
 </html>

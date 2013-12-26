@@ -43,11 +43,16 @@ div#container {
   left: -125px;
   top: 74px;
 }
-.city span:hover {
-  background-color: #FFFFC0;
+.city a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+.city a:hover {
+  background-color: #FFFFEF;
   cursor: pointer;
 }
-span.highlight {
+a.highlight {
   background-color: #FFFFC0;
 }
 .dimmed {
