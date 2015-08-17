@@ -1,6 +1,10 @@
 require 'twitter'
 require 'json'
 
+if rand > 0.5
+  abort 'not sending'
+end
+
 twitter_conf = File.open('./twitter_credentials.json') { |f|
   JSON.parse(f.read)
 }
@@ -41,6 +45,5 @@ client.update(status_msg)
 already_sent << { 'date' => Time.now.to_f, 'sentence' => candidate_sentence }
 
 File.open('./already_sent.json', 'w') { |f|
-  JSON.dump(already_sent,
-            f)
+  JSON.dump(already_sent, f)
 }
